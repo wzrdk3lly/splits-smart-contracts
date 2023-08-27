@@ -1,0 +1,45 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/securityresearcher/Development/ETH/personal-projects/splits-dapp/splits-smart-contracts/src/Splits.sol": {
+      "lastModificationDate": 1693166294989,
+      "contentHash": "08d41f8d87bae688e50b08fb4c97429b",
+      "sourceName": "src/Splits.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "forge-std/=lib/forge-std/src/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Splits"
+      ]
+    }
+  }
+}
