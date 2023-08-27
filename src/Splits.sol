@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 // contract deployed at 0x1dfB5B91bbbF0F78eF7e8c9A18E69F88Db47E05B
 contract Splits {
     // collect the history of an address that performs a split
-    mapping(address => uint256[]) splitsHistory;
+    mapping(address => uint256) splitsHistory;
 
     // emit an event that a split was indeed performed
     event splitSuccess(
@@ -31,8 +31,14 @@ contract Splits {
         (bool sent, bytes memory data) = toAddress.call{value: msg.value}("");
         if (!sent) revert FailedToSend();
 
-        splitsHistory[msg.sender].push(msg.value);
+        splitsHistory[msg.sender] += msg.value;
 
         emit splitSuccess(msg.sender, toAddress, msg.value);
+    }
+
+    function getSplitHistory(
+        address searchAddress
+    ) public view returns (uint256) {
+        return splitsHistory[searchAddress];
     }
 }

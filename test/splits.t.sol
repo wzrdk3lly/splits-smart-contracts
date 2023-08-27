@@ -40,7 +40,18 @@ contract splits is Test {
         vm.expectRevert();
         vm.prank(user1);
         splitsContract.sendSplit{value: user1MoreThanHalf}(user2);
+    }
 
-        uint256 user1NewBalance = user1.balance;
+    // NEED to add a read function to view the history of the mapping
+    function testReadSplitHistory() public {
+        uint256 user1HalfBalance = user1.balance / 2;
+
+        vm.prank(user1);
+        splitsContract.sendSplit{value: user1HalfBalance}(user2);
+        vm.prank(user1);
+        splitsContract.sendSplit{value: user1HalfBalance / 2}(user2);
+
+        vm.prank(user1);
+        uint256 value = splitsContract.getSplitHistory(user1);
     }
 }

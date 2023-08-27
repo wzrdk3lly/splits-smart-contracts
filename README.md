@@ -4,4 +4,4 @@ Splits is an custom smart contract that facilitates sending half of a user's bal
 
 ## contract deployment address
 
-contract deployed at 0x1dfB5B91bbbF0F78eF7e8c9A18E69F88Db47E05B
+contract deployed at 0xd84260a1D6e86Cc55b6Ca3DB4aC087cEcE8A89eF
