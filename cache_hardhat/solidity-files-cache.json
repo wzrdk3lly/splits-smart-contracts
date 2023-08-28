@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/securityresearcher/Development/ETH/personal-projects/splits-dapp/splits-smart-contracts/src/Splits.sol": {
-      "lastModificationDate": 1693174253580,
-      "contentHash": "1e63472e281d6e2f400782cca03f410f",
+      "lastModificationDate": 1693228583088,
+      "contentHash": "6fab73e35d651e753116b4f48889aa9f",
       "sourceName": "src/Splits.sol",
       "solcConfig": {
         "version": "0.8.13",

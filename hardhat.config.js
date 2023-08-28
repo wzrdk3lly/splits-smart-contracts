@@ -15,5 +15,7 @@ module.exports = {
       accounts: [`0x${PRIVATE_KEY}`],
     },
   },
+  gasPrice: 20000000000,
+  gas: 6000000,
 };
 // Be sure to install hardhat-foundry, dotenv, and nomiclabs/hardhat-waffle to deploy

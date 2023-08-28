@@ -22,11 +22,11 @@ contract Splits {
      * @param toAddress addrss that the split value will be sent to
      */
     function sendSplit(address payable toAddress) public payable {
-        uint256 halfBalance = (msg.sender.balance); // After the transaction is sent, the balance of the user should have been divided by two.
+        // uint256 halfBalance = (msg.sender.balance); // After the transaction is sent, the balance of the user should have been divided by two.
 
-        if (msg.value > halfBalance)
-            // if the value sent exceeds the current balance, we know that more than half was sent.
-            revert InvalidSplit(msg.value, halfBalance);
+        // if (msg.value > halfBalance)
+        //     // if the value sent exceeds the current balance, we know that more than half was sent.
+        //     revert InvalidSplit(msg.value, halfBalance);
 
         (bool sent, bytes memory data) = toAddress.call{value: msg.value}("");
         if (!sent) revert FailedToSend();
